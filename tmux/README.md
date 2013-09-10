@@ -12,4 +12,4 @@ make
 
 make install
 
-download/copy vimrc file,then put it at ~/.tmux.conf or /etc/tmux.conf
+download/copy .tmux.conf file,then put it at ~/.tmux.conf or /etc/tmux.conf
