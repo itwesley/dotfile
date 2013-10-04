@@ -1,10 +1,10 @@
 You can use tab autocomplete in python interpreter.
 
-::HOW TO::
+#::HOW TO::
 
-# Download the .pythonrc file, and put it in your home directory.
+1. Download the .pythonrc file, and put it in your home directory.
 
-# echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.bashrc
+2. echo "export PYTHONSTARTUP=~/.pythonrc" >> ~/.bashrc
 
-# source ~/.bashrc
+3. source ~/.bashrc
 
