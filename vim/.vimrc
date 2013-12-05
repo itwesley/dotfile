@@ -28,6 +28,10 @@ set history=100
 
 set vb
 
+inoremap <Tab> <C-x><C-o>
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 autocmd FileType py set shiftwidth=4 | set expandtab
 let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
 
