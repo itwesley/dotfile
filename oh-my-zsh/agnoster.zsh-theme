@@ -62,7 +62,7 @@ prompt_context() {
   local user=`whoami`
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
 	#autoload -U colors && colors
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%{$fg_bold[green]%}$user %{$fg_bold[yellow]%}⚡ %{$fg_bold[blue]%}D%{$fg_bold[red]%}e%{$fg_bold[yellow]%}v%{$fg_bold[blue]%}O%{$fg_bold[green]%}p%{$fg_bold[blue]%}s%{$reset_color%}"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)%{$fg_bold[green]%}$user %{$fg_bold[yellow]%}⚡ %{$fg_bold[blue]%}D%{$fg_bold[red]%}e%{$fg_bold[yellow]%}v%{$fg_bold[blue]%}O%{$fg_bold[green]%}p%{$fg_bold[red]%}s%{$reset_color%}"
     #prompt_segment black default "%(!.%{%F{yellow}%}.)%{$fg[green]%}$user %{$fg[yellow]%}⚡ %{$fg[blue]%}D%{$fg[red]%}e%{$fg[yellow]%}v%{$fg[blue]%}O%{$fg[green]%}p%{$fg[blue]%}s"
   fi
 }
