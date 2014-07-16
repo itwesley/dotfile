@@ -5,7 +5,7 @@
 	helper = cache --timeout=3600
 [core]
 	editor = vim
-	excludesfile = /root/.gitignore_global
+	excludesfile = /home/wesley/.gitignore_global
 [merge]
 	tool = vimdiff
 [alias]
@@ -15,3 +15,5 @@
 	br = branch
 	mg = merge
 	co = checkout
+[push]
+	default = simple
