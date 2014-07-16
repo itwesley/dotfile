@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "omd" do |omd| 
+    omd.vm.box = "Debian-7.2-amd64"
+    omd.vm.host_name = "omd"
+    omd.vm.network "private_network", ip: "192.168.56.71"
+    omddisk = "/Users/wesley/VirtualBox VMs/omddisk.vdi"
+    omd.vm.provider "virtualbox" do |vb1|
+      vb1.customize ["modifyvm", :id, "--name", "omd", "--memory", "256"]  
+      #vb1.customize ["createhd", "--filename", omddisk, "--size", 3000 * 1024] 
+      vb1.customize ["storageattach", :id, "--storagectl", 'IDE Controller', "--port", 1, "--device", 0, "--type", 'hdd', "--medium", omddisk]  
+    end
+  end
+
+  config.vm.define "omdcli" do |omdcli| 
+    omdcli.vm.box = "Debian-7.2-amd64"
+    omdcli.vm.host_name = "omdcli"
+    omdcli.vm.network "private_network", ip: "192.168.56.72"
+    omdclidisk = "/Users/wesley/VirtualBox VMs/omdclidisk.vdi"
+    omdcli.vm.provider "virtualbox" do |vb2|
+      vb2.customize ["modifyvm", :id, "--name", "omdcli", "--memory", "256"]  
+      vb2.customize ["createhd", "--filename", omdclidisk, "--size", 1000 * 1024]  
+      vb2.customize ["storageattach", :id, "--storagectl", 'IDE Controller', "--port", 1, "--device", 0, "--type", 'hdd', "--medium", omdclidisk]  
+    end
+  end
+end

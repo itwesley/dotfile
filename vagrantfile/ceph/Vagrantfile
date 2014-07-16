@@ -1,0 +1,51 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "ceph1" do |ceph1| 
+    ceph1.vm.box = "Debian-7.2-amd64"
+    ceph1.vm.host_name = "ceph1"
+    ceph1.vm.network "private_network", ip: "192.168.56.91"
+    ceph1disk = "/Users/wesley/VirtualBox VMs/ceph1disk.vdi"
+    ceph1.vm.provider "virtualbox" do |vb1|
+      vb1.customize ["modifyvm", :id, "--name", "ceph1", "--memory", "256"]  
+      #vb1.customize ["createhd", "--filename", ceph1disk, "--size", 1000 * 1024]  
+      vb1.customize ["storageattach", :id, "--storagectl", 'IDE Controller', "--port", 1, "--device", 0, "--type", 'hdd', "--medium", ceph1disk]  
+    end
+  end
+
+  config.vm.define "ceph2" do |ceph2| 
+    ceph2.vm.box = "Debian-7.2-amd64"
+    ceph2.vm.host_name = "ceph2"
+    ceph2.vm.network "private_network", ip: "192.168.56.92"
+    ceph2disk = "/Users/wesley/VirtualBox VMs/ceph2disk.vdi"
+    ceph2.vm.provider "virtualbox" do |vb2|
+      vb2.customize ["modifyvm", :id, "--name", "ceph2", "--memory", "256"]  
+      #vb2.customize ["createhd", "--filename", ceph2disk, "--size", 1000 * 1024]  
+      vb2.customize ["storageattach", :id, "--storagectl", 'IDE Controller', "--port", 1, "--device", 0, "--type", 'hdd', "--medium", ceph2disk]  
+    end
+  end
+
+  config.vm.define "ceph3" do |ceph3| 
+    ceph3.vm.box = "Debian-7.2-amd64"
+    ceph3.vm.host_name = "ceph3"
+    ceph3.vm.network "private_network", ip: "192.168.56.93"
+    ceph3disk = "/Users/wesley/VirtualBox VMs/ceph3disk.vdi"
+    ceph3.vm.provider "virtualbox" do |vb3|
+      vb3.customize ["modifyvm", :id, "--name", "ceph3", "--memory", "256"]  
+      #vb3.customize ["createhd", "--filename", ceph3disk, "--size", 1000 * 1024]  
+      vb3.customize ["storageattach", :id, "--storagectl", 'IDE Controller', "--port", 1, "--device", 0, "--type", 'hdd', "--medium", ceph3disk]  
+    end
+  end
+ config.vm.define "cephclient" do |cephclient| 
+    cephclient.vm.box = "Debian-7.2-amd64"
+    cephclient.vm.host_name = "cephclient"
+    cephclient.vm.network "private_network", ip: "192.168.56.94"
+    cephclient.vm.provider "virtualbox" do |vb4|
+      vb4.customize ["modifyvm", :id, "--name", "cephclient", "--memory", "256"]  
+    end
+  end
+end
