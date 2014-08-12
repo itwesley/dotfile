@@ -24,7 +24,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -81,6 +81,7 @@ export PATH="/usr/lib/jvm/java-6-sun/bin:/usr/lib/jvm/java-6-sun/jre/bin:/home/w
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ## Custom alias #################################################
+alias lsp='ls -d $PWD/*'
 alias vi='vim'
 alias cls='clear'
 alias axel='axel -n 10 -a -S5'
@@ -97,6 +98,7 @@ alias backup='~/Scripts/backup.sh'
 alias cdd='cd ~/Desktop'
 alias cdD='cd ~/Dropbox'
 alias cds='cd ~/Scripts/'
+alias cdg='cd ~/github/'
 alias cdp='cd ~/Scripts/prac/python'
 alias cdS='cd /pool/Software'
 alias nets='sudo dhclient eth0;sudo arp -s 192.168.1.1 00:22:15:51:87:fa'
@@ -126,6 +128,7 @@ alias gu='sudo sed -i '/wrapped/a\/home/wesley/Scripts/xinput.sh' /opt/google/ch
 alias rest='sudo s2disk'
 alias url='/home/wesley/Scripts/shortUrl.sh'
 alias pb='/home/wesley/Scripts/pastebin.sh'
+alias mg='/home/wesley/Scripts/mailgun.sh'
 alias sw='sudo swapoff -a ; sudo swapon -a'
 alias music='mocp'
 #################################################################
