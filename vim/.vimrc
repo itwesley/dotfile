@@ -29,6 +29,7 @@ set history=100
 set vb
 
 inoremap <C-w> <C-x><C-o>
+map<F3> 0wi<CR><Esc>
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
