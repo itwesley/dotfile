@@ -18,12 +18,15 @@ make install
 download/copy .tmux.conf file,then put it at ~/.tmux.conf or /etc/tmux.conf
 
 
+
 :: tmux-powerline ::
 
 git clone git://github.com/erikw/tmux-powerline.git
 
-cp tmux.conf.powerline ~/.tmux.conf
+download/copy .tmux.conf.powerline, mytheme.sh and .tmux-powerlinerc, then:
 
-cp mytheme.sh tmux-powerline/theme
+cp .tmux.conf.powerline ~/.tmux.conf
+
+cp mytheme.sh tmux-powerline/heme
 
 cp .tmux-powerlinerc ~/
