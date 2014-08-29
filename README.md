@@ -1,1 +1,1 @@
-# It's my all of dotfiles in here.
+# It's all of my dotfiles in here.
