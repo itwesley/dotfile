@@ -1,0 +1,19 @@
+[user]
+    name = itwesley    
+    email = wcshen1126@gmail.com
+[credential]
+    helper = cache --timeout=3600
+[core]
+    editor = vim
+    excludesfile = /root/.gitignore_global
+[merge]    
+    tool = vimdiff
+[alias]    
+    lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status
+    cm = commit
+    br = branch
+    mg = merge
+    co = checkout
+[push]
+    default = simple
