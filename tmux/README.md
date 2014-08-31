@@ -21,7 +21,7 @@ download/copy .tmux.conf file,then put it at ~/.tmux.conf or /etc/tmux.conf
 
 :: tmux-powerline ::
 
-git clone git://github.com/erikw/tmux-powerline.git
+git clone https://github.com/erikw/tmux-powerline.git
 
 download/copy .tmux.conf.powerline, mytheme.sh and .tmux-powerlinerc, then:
 
