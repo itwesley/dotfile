@@ -1,0 +1,50 @@
+filetype plugin on
+filetype indent on
+let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
+let g:pydiction_menu_height = 20
+
+augroup Shebang
+autocmd BufNewFile *.sh 0put =\"#!/bin/bash \<nl>\"|$
+autocmd BufNewFile *.py 0put =\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\"|$
+autocmd BufNewFile *.rb 0put =\"#!/usr/bin/ruby\<nl>\"|$
+autocmd BufNewFile *.c 0put =\"#include <stdio.h>\<nl>#include <stdlib.h>\<nl>\"|$
+augroup END
+
+"for go language
+inoremap <C-w> <C-x><C-o>
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+"set paste
+set encoding=utf-8
+set fileencodings=utf-8,cp950
+set number
+hi LineNr ctermfg=gray
+syntax on 
+
+set expandtab
+set shiftwidth=4
+set tabstop=4 
+set softtabstop=4
+
+set ruler
+set hlsearch
+set incsearch
+set smartindent
+set ru
+set confirm
+set history=100 
+
+set vb
+
+autocmd FileType py set shiftwidth=4 | set expandtab
+let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
+
+ab #p #!/usr/bin/env python<CR># -*- coding: utf-8 -*-
+ab #r #!/usr/bin/ruby
+ab #b #!/bin/bash
+ab #c #include <stdio.h><CR>#include <stdlib.h>
+
+ab if_ if __name__ == '__main__':<CR>	main()
+ab pack package main<CR><CR>import "fmt"<CR><CR>func main() {<CR><CR>}
+ab main int main() {<CR><CR>return 0;<CR>}
