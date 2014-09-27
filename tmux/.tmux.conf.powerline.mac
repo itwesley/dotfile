@@ -76,3 +76,6 @@ bind-key -t vi-copy 'y' copy-selection
 
 # bind previous window
 bind p previous-window
+
+# for pbcopy/pbpaste
+set-option -g default-command "reattach-to-user-namespace -l zsh"
