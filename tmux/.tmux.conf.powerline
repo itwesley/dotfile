@@ -74,3 +74,6 @@ bind-key -t vi-copy 'y' copy-selection
 
 # bind previous window
 bind p previous-window
+
+# for xclip - copy/paste
+set-option -g default-command "reattach-to-user-namespace -l zsh"
