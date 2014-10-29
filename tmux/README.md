@@ -27,6 +27,6 @@ download/copy .tmux.conf.powerline, mytheme.sh and .tmux-powerlinerc, then:
 
 cp .tmux.conf.powerline ~/.tmux.conf
 
-cp mytheme.sh tmux-powerline/heme
+cp mytheme.sh tmux-powerline/theme
 
 cp .tmux-powerlinerc ~/
