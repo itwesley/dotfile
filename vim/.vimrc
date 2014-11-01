@@ -34,7 +34,6 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 autocmd FileType py set shiftwidth=4 | set expandtab
-let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
 
 ab #p #!/usr/bin/env python<CR># -*- coding: utf-8 -*-
 ab #r #!/usr/bin/ruby
