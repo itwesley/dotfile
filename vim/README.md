@@ -11,4 +11,10 @@ You can use tab autocomplete when you edit a python file.
 
 4. cp complete-dict pydiction.py python_pydiction.vim ~/.vim/after/ftplugin/
 
-5. Download/copy vimrc file,then put it at ~/.vimrc
+5. mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+6. cd ~/.vim/bundle
+
+7. git clone git://github.com/nathanaelkane/vim-indent-guides.git
+
+8. Download/copy vimrc file,then put it at ~/.vimrc
