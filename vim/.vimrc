@@ -31,6 +31,7 @@ set vb
 
 inoremap <C-w> <C-x><C-o>
 map<F3> 0wi<CR><Esc>
+map<F4> i<BS><Space><ESC>0
 map<F5> :set number<Esc>
 map<F6> :set number!<Esc>
 map<F7> :set paste<Esc>
