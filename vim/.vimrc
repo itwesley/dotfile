@@ -1,4 +1,12 @@
-filetype plugin on
+execute pathogen#infect()
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+highlight Normal guibg=Black guifg=White
+
+filetype plugin indent on
 let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
 let g:pydiction_menu_height = 20
 
@@ -14,7 +22,7 @@ set fileencodings=utf-8,cp950
 hi LineNr ctermfg=gray
 syntax on 
 
-set shiftwidth=2
+set shiftwidth=4
 set tabstop=4 
 set softtabstop=4
 
@@ -30,12 +38,12 @@ set history=100
 set vb
 
 inoremap <C-w> <C-x><C-o>
-map<F3> 0wi<CR><Esc>
-map<F4> i<BS><Space><ESC>0
-map<F5> :set number<Esc>
-map<F6> :set number!<Esc>
-map<F7> :set paste<Esc>
-map<F8> :set paste!<Esc>
+map<F7> i<BS><Space><Esc>0
+map<F9> 0wi<CR><Esc>
+map<F3> :set number<Esc>
+map<F4> :set number!<Esc>
+map<F5> :set paste<Esc>
+map<F6> :set paste!<Esc>
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
