@@ -1,15 +1,21 @@
+"python pep8 indent
 execute pathogen#infect()
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesOdd  ctermbg=darkgrey
 hi IndentGuidesEven ctermbg=darkgrey
 highlight Normal guibg=Black guifg=White
-
 filetype plugin indent on
+
+"""python pep checker
+let g:pep8_map='<leader>8'
+
+"""python auto autocomplete
 let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
 let g:pydiction_menu_height = 20
 
+"""auto generate shebang at head of files.
 augroup Shebang
 autocmd BufNewFile *.sh 0put =\"#!/bin/bash \<nl>\"|$
 autocmd BufNewFile *.py 0put =\"#!/usr/bin/env python\<nl># -*- coding: utf-8 -*-\<nl>\"|$
@@ -34,11 +40,13 @@ set ru
 set confirm
 set history=100 
 "set paste
-
 set vb
 
+"""key mapping
 inoremap <C-w> <C-x><C-o>
+"column to row
 map<F7> i<BS><Space><Esc>0
+"row to column
 map<F9> 0wi<CR><Esc>
 map<F3> :set number<Esc>
 map<F4> :set number!<Esc>
@@ -50,6 +58,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 autocmd FileType py set shiftwidth=4 | set expandtab
 
+"""autocomplete string
 ab #p #!/usr/bin/env python<CR># -*- coding: utf-8 -*-
 ab #r #!/usr/bin/ruby
 ab #b #!/bin/bash
