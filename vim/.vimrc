@@ -15,6 +15,12 @@ let g:pep8_map='<leader>8'
 let g:pydiction_location = '~/.vim/after/ftplugin/complete-dict'
 let g:pydiction_menu_height = 20
 
+"""NERDTree window at right side
+let NERDTreeWinPos="right"
+
+"""NERDTree display when vim startup.
+"autocmd VimEnter * NERDTree
+
 """auto generate shebang at head of files.
 augroup Shebang
 autocmd BufNewFile *.sh 0put =\"#!/bin/bash \<nl>\"|$
@@ -24,7 +30,7 @@ augroup END
 
 set encoding=utf-8
 set fileencodings=utf-8,cp950
-"set number
+set number
 hi LineNr ctermfg=gray
 syntax on 
 
@@ -46,12 +52,19 @@ set vb
 inoremap <C-w> <C-x><C-o>
 "column to row
 map<F7> i<BS><Space><Esc>0
+
 "row to column
 map<F9> 0wi<CR><Esc>
+
+"NERDTree Toogle
+map <C-n> :NERDTreeToggle<CR>
+
+"Misc
 map<F3> :set number<Esc>
 map<F4> :set number!<Esc>
 map<F5> :set paste<Esc>
 map<F6> :set paste!<Esc>
+
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
