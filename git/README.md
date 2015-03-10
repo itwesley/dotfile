@@ -1,1 +1,1 @@
-It's a git config example.
+It's my git config example.
