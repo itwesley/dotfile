@@ -1,7 +1,7 @@
 Building your personal python IDE with VIM.
 You can use tab autocomplete when you edit a python file.
 
-NOTES: (Key Map)
+NOTES: (Key Mapping)
 \ig ---> highlight indent
 \8  ---> pep8 checker
 C-n ---> open NERDTree window
