@@ -75,4 +75,4 @@ autocmd FileType py set shiftwidth=4 | set expandtab
 ab #p #!/usr/bin/env python<CR># -*- coding: utf-8 -*-
 ab #r #!/usr/bin/ruby
 ab #b #!/bin/bash
-ab if_ if __name__ == '__main__':<CR>    main()
+ab if_ if __name__ == '__main__':<CR>main()
