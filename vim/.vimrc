@@ -41,6 +41,7 @@ set softtabstop=4
 set ruler
 set hlsearch
 set cursorline
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
 set incsearch
 set smartindent
 set ru
