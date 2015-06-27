@@ -31,7 +31,7 @@ augroup END
 set encoding=utf-8
 set fileencodings=utf-8,cp950
 set number
-hi LineNr ctermfg=gray
+hi LineNr ctermfg=darkgray
 syntax on 
 
 set shiftwidth=4
@@ -41,7 +41,8 @@ set softtabstop=4
 set ruler
 set hlsearch
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
+hi CursorLine  cterm=bold ctermbg=black
+hi CursorLineNr cterm=bold ctermfg=white ctermbg=black
 set incsearch
 set smartindent
 set ru
