@@ -49,3 +49,4 @@ run-shell ~/.tmux/tmux-resurrect/resurrect.tmux
 run-shell ~/.tmux/tmux-continuum/continuum.tmux
 set -g @continuum-save-interval '60'
 EOF
+
