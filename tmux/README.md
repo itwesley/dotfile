@@ -44,7 +44,7 @@ git clone https://github.com/tmux-plugins/tmux-continuum.git
 git clone https://github.com/tmux-plugins/tmux-resurrect.git
 
 cat >> ~/.tmux.conf <<EOF
-# for tmux Resurrect & Continuum
+#for tmux Resurrect & Continuum
 run-shell ~/.tmux/tmux-resurrect/resurrect.tmux
 run-shell ~/.tmux/tmux-continuum/continuum.tmux
 set -g @continuum-save-interval '60'
