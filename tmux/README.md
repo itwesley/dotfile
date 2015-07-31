@@ -3,7 +3,7 @@ You can use them to build a beautiful tmux status bar.
 
 .:: HOW TO ::.
 
-:: tmux-mem-cpu-load ::
+## tmux-mem-cpu-load
 
 git clone https://github.com/thewtex/tmux-mem-cpu-load.git
 
@@ -19,7 +19,7 @@ download/copy .tmux.conf file,then put it at ~/.tmux.conf or /etc/tmux.conf
 
 
 
-:: tmux-powerline ::
+## tmux-powerline 
 
 git clone https://github.com/erikw/tmux-powerline.git
 
@@ -33,7 +33,7 @@ cp .tmux-powerlinerc ~/
 
 
 
-:: tmux plugins -> Tmux Resurrect and Tmux Continuum
+## tmux plugins -> Tmux Resurrect and Tmux Continuum
 
 mkdir ~/.tmux
 
