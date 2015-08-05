@@ -51,7 +51,7 @@ set history=100
 "set paste
 set vb
 
-"folding settings
+"folding settings (you can see help by pressing ':help fold')
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
