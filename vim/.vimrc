@@ -51,6 +51,12 @@ set history=100
 "set paste
 set vb
 
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
 """key mapping
 inoremap <C-w> <C-x><C-o>
 "column to row
