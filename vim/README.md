@@ -27,12 +27,14 @@ C-n ---> open NERDTree window
 
 4. git clone git://github.com/nathanaelkane/vim-indent-guides.git
 
-5. git clone git clone https://github.com/scrooloose/nerdtree.git
+5. git clone https://github.com/scrooloose/nerdtree.git
 
-6. sudo pip install pep
+6. git clone https://github.com/Lokaltog/vim-powerline.git
 
-7. mkdir -p  ~/.vim/ftplugin/python  
+7. sudo pip install pep
 
-8. Download [pep8.vim](http://www.vim.org/scripts/download_script.php?src_id=14366) to ~/.vim/ftplugin/python
+8. mkdir -p  ~/.vim/ftplugin/python  
 
-9. Download .vimrc file and move it to ~/.vimrc
+9. Download [pep8.vim](http://www.vim.org/scripts/download_script.php?src_id=14366) to ~/.vim/ftplugin/python
+
+10. Download .vimrc file and move it to ~/.vimrc

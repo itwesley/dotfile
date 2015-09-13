@@ -1,3 +1,9 @@
+"vim-powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set noshowmode
+set t_Co=256
+
 "python pep8 indent
 execute pathogen#infect()
 let g:indent_guides_start_level = 2
