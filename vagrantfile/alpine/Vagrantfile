@@ -1,0 +1,12 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.define "dk1" do |dk1|
+    dk1.vm.box = "mrlesmithjr/alpine-3.3.1"
+  end
+
+  config.vm.define "dk2" do |dk2|
+    dk2.vm.box = "mrlesmithjr/alpine-3.3.1"
+  end
+end
