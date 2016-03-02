@@ -17,5 +17,6 @@
 	co = checkout
 	last = log -1 HEAD
 	unstage = reset HEAD --
+	dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [push]
 	default = simple
