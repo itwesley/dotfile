@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+  config.vm.define "dk1" do |dk1|
+    dk1.vm.box = "ubuntu-15.04"
+    dk1.vm.host_name = "dk1"
+  	 dk1.vm.base_mac = "0800274AC42F"
+    dk1.vm.network "private_network", ip: "192.168.56.51"
+    dk1.vm.provider "virtualbox" do |vb1|
+      vb1.customize ["modifyvm", :id, "--name", "dk1", "--memory", "1024"]  
+    end
+  end
+
+  config.vm.define "dk2" do |dk2|
+    dk2.vm.box = "ubuntu-15.04"
+	dk2.vm.host_name = "dk2"
+	dk2.vm.base_mac = "0800274AC43F"
+	dk2.vm.network "private_network", ip: "192.168.56.52"
+	dk2.vm.provider "virtualbox" do |vb2|
+      vb2.customize ["modifyvm", :id, "--name", "dk2", "--memory", "1024"]  
+    end
+  end
+end
