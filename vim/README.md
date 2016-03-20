@@ -37,4 +37,12 @@ C-n ---> open NERDTree window
 
 9. Download [pep8.vim](http://www.vim.org/scripts/download_script.php?src_id=14366) to ~/.vim/ftplugin/python
 
-10. Download .vimrc file and move it to ~/.vimrc
+10. cd ~/.vim/
+
+11. git clone https://github.com/stephpy/vim-yaml.git
+
+12. cp vim-yaml/after/ftplugin/yaml.vim after/ftplugin/
+
+13. cp vim-yaml/after/syntax/yaml.vim after/syntax/
+
+14. Download .vimrc file and move it to ~/.vimrc
