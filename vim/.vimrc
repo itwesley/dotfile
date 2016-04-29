@@ -91,3 +91,6 @@ ab #p #!/usr/bin/env python<CR># -*- coding: utf-8 -*-
 ab #r #!/usr/bin/ruby
 ab #b #!/bin/bash
 ab if_ if __name__ == '__main__':<CR>main()
+
+"ansible yaml syntax
+let g:ansible_options = {'ignore_blank_lines': 0}
